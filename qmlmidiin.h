@@ -161,4 +161,6 @@ public slots:
 
 };
 
+QML_DECLARE_TYPE(QmlMidiIn)
+
 #endif // QMLMIDIIN_H

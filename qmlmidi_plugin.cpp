@@ -14,5 +14,7 @@ void QmlMidiPlugin::registerTypes(const char *uri)
     qmlRegisterType<QmlMidiOut>("org.komplex.qmlmidi", 1, 0, "MidiOut");
 }
 
+#if QT_VERSION < 0x050000
 Q_EXPORT_PLUGIN2(QmlMidi, QmlMidiPlugin)
+#endif
 

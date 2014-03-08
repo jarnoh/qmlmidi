@@ -146,4 +146,6 @@ protected:
 
 };
 
+QML_DECLARE_TYPE(QmlMidiOut)
+
 #endif // QMLMIDIOUT_H
