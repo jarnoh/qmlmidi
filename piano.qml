@@ -1,6 +1,6 @@
-import QtQuick 1.0
+import QtQuick 2.3
+
 import org.komplex.qmlmidi 1.0
-import QtWebKit 1.0
 
 Rectangle
 {

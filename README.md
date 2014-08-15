@@ -8,6 +8,11 @@ Instructions
 
 Compile plugin, then use in any QML application or QML viewer.
 
+Requirements
+------------
+
+Qt5
+
 Example
 -------
 See piano.qml.

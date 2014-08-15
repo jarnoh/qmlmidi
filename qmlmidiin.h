@@ -8,7 +8,7 @@
 
 #include "qmlmidi.h"
 
-class QmlMidiIn : public QDeclarativeItem
+class QmlMidiIn : public QQuickItem
 {
     Q_OBJECT
 
@@ -19,7 +19,7 @@ class QmlMidiIn : public QDeclarativeItem
     Q_PROPERTY(bool active READ getActive WRITE setActive)
 
 public:
-    explicit QmlMidiIn(QDeclarativeItem *parent = 0);
+    explicit QmlMidiIn(QQuickItem *parent = 0);
 
 private:
     RtMidiIn midiIn;
@@ -42,7 +42,7 @@ public:
             // midiIn.ignoreTypes(false,false,false);
             return true;
         }
-        catch(RtError e)
+        catch(RtMidiError e)
         {
             DEBUG("Exception %s", e.what());
             return false;

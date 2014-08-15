@@ -5,7 +5,7 @@
 
 #include "qmlmidiin.h"
 
-QmlMidiIn::QmlMidiIn(QDeclarativeItem *parent) :
-    QDeclarativeItem(parent), port(-1)
+QmlMidiIn::QmlMidiIn(QQuickItem *parent) :
+    QQuickItem(parent), port(-1)
 {
 }

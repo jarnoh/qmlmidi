@@ -5,24 +5,23 @@
 
 TEMPLATE = lib
 TARGET = qmlmidi
-QT += declarative
+QT += qml quick
 CONFIG += qt plugin
 
 DESTDIR = $$PWD/org/komplex/qmlmidi
 
-INCLUDEPATH += rtmidi-1.0.15
+INCLUDEPATH += rtmidi-2.1.0
 
 # Input
 SOURCES += \
     qmlmidi_plugin.cpp \
-    rtmidi-1.0.15/RtMidi.cpp \
+    rtmidi-2.1.0/RtMidi.cpp \
     qmlmidiin.cpp \
     qmlmidiout.cpp
 
 HEADERS += \
     qmlmidi_plugin.h \
-    rtmidi-1.0.15/RtMidi.h \
-    rtmidi-1.0.15/RtError.h \
+    rtmidi-2.1.0/RtMidi.h \
     qmlmidiin.h \
     qmlmidiout.h \
     qmlmidi.h
