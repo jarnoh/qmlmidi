@@ -1,20 +1,46 @@
-import QtQuick 1.0
+import QtQuick 2.3
+
 import org.komplex.qmlmidi 1.0
-import QtWebKit 1.0
 
 Rectangle
 {
-    id:main
+    id: main
 
-    width:640
-    height:480
+    width: 640
+    height: 480
+
+    color: "slategrey"
+
+    property font defaultFont
+    defaultFont.family: "Helvetica Neue"
+    defaultFont.pixelSize: 24
+
+    property color textColor: "ivory"
 
     Column
     {
-    Text { text: "Out: "+synth.portName }
-    Text { text: "Program: #"+synth.program }
-    Text { text: "Use up/down to select midi out port, left/right to select program" }
-    Text { text: "Use qwerty to play" }
+        id: column
+        anchors.fill: parent
+
+        Repeater {
+            model: [
+                "Out: "+synth.portName,
+                "Program: #"+synth.program,
+                "",
+                "Instructions:",
+                "- up/down to select midi out port",
+                "- left/right to select program",
+                "- qwerty to play",
+            ]
+            Text {
+                x: 6
+                width: column.width - 6
+                text: modelData
+                font: defaultFont
+                color: textColor
+                wrapMode: Text.WordWrap
+            }
+        }
     }
 
     MidiOut

@@ -1,2 +1,4 @@
+module org.komplex.qmlmidi
+
 plugin qmlmidi
 

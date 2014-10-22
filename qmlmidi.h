@@ -6,13 +6,15 @@
   * Copyright (c) 2011 Jarno Heikkinen
   */
 
-#include <QDeclarativeItem>
+
+#include <QtQml/QQmlEngine>
+#include <QtQuick/QQuickItem>
 #include "RtMidi.h"
 
 #ifdef __RTMIDI_DEBUG__ // debug output flag shared with rtmidi
-#define DEBUG(s...) qDebug(__FILE__ " " s)
+#define DEBUG(...) qDebug(__FILE__ " " __VA_ARGS__)
 #else
-#define DEBUG(s...) while(0)
+#define DEBUG(...) while(0)
 #endif
 
 #endif // QMLMIDI_H

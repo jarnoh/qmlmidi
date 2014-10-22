@@ -8,7 +8,7 @@
 
 #include "qmlmidi.h"
 
-class QmlMidiOut : public QDeclarativeItem
+class QmlMidiOut : public QQuickItem
 {
     Q_OBJECT
 
@@ -18,7 +18,7 @@ class QmlMidiOut : public QDeclarativeItem
     Q_PROPERTY(QList<QVariant> portNames READ getPortNames)
 
 public:
-    explicit QmlMidiOut(QDeclarativeItem *parent = 0);
+    explicit QmlMidiOut(QQuickItem *parent = 0);
 
 signals:
     void portChanged();
@@ -95,7 +95,7 @@ public:
             midiOut.openPort(portNumber, portname.toStdString());
             return true;
         }
-        catch(RtError e)
+        catch(RtMidiError e)
         {
             DEBUG("Exception %s", e.what());
             return false;
@@ -133,7 +133,7 @@ public:
             midiOut.sendMessage(&m);
             return true;
         }
-        catch(RtError e)
+        catch(RtMidiError e)
         {
             DEBUG("Exception %s", e.what());
             return false;

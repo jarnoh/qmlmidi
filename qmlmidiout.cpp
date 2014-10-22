@@ -5,7 +5,7 @@
 
 #include "qmlmidiout.h"
 
-QmlMidiOut::QmlMidiOut(QDeclarativeItem *parent) :
-    QDeclarativeItem(parent), port(-1)
+QmlMidiOut::QmlMidiOut(QQuickItem *parent) :
+    QQuickItem(parent), port(-1)
 {
 }
