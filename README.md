@@ -28,7 +28,7 @@ Copyright (c) 2011 Jarno Heikkinen <jarnoh@komplex.org>.
 
 ---
 
-The RtMidi license is similar to the the MIT License, with the added "feature" that modifications be sent to the developer.
+The RtMidi license is similar to the MIT License, with the added "feature" that modifications be sent to the developer.
 
     RtMidi: realtime MIDI i/o C++ classes
     Copyright (c) 2003-2011 Gary P. Scavone
